@@ -584,6 +584,20 @@ ul.bullets li .note{margin-top:4px}
 /* ── 루프 도해 (2026-09-16) ── */
 .svgfig.loopfig svg{max-height:none;width:100%;height:auto}
 .svgfig.loopfig{margin:6px 0 0}
+
+/* ── 인쇄·PDF — 슬라이드 한 장이 한 쪽 (1280×720px = 16:9), 2026-09-16 ── */
+@media print{
+  @page{size:338.67mm 190.5mm;margin:0}
+  html,body{margin:0;padding:0;background:#fff}
+  #stage{width:1280px!important;height:auto!important;transform:none!important;margin:0!important}
+  .slide{width:1280px!important;height:690px!important;min-height:690px!important;max-height:690px!important;
+    border-bottom:0!important;overflow:hidden;page-break-after:always;break-after:page;
+    page-break-inside:avoid;break-inside:avoid;box-shadow:none;margin:0!important}
+  .slide:last-child{page-break-after:auto;break-after:auto}
+  .slide::after{right:22px;bottom:14px;font-size:13px}
+  .copybtn,#bar,#num,#notes,#overview,#help{display:none!important}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+}
 </style>
 </head>
 <body>
@@ -699,7 +713,7 @@ ul.bullets li .note{margin-top:4px}
 
 
 
->
+
 
 
     <section class="slide" data-sid="s04">
@@ -734,7 +748,7 @@ ul.bullets li .note{margin-top:4px}
       <aside class="notes">오늘의 문제의식 정점. "AI가 틀린다"가 아니라 "그럴듯하게 틀려서 사람 눈을 통과한다"가 핵심. 사례 전모는 4절에서 다시 — 여기서는 긴장까지만.</aside>
     </section>
 
->
+
 
     <section class="slide" data-sid="s12">
       <div class="eyebrow">1절 · 왜 지금인가</div>
@@ -1020,7 +1034,7 @@ ul.bullets li .note{margin-top:4px}
       <p class="sub">매주 도는 동향 팀 · 결산 검토보고 · 시정요구 전수 대조 — 실제로 도는 장면</p>
     </section>
 
->
+
 
     <section class="slide" data-sid="s19">
       <div class="eyebrow">3절 · 다양한 예시</div>
@@ -1275,7 +1289,7 @@ ul.bullets li .note{margin-top:4px}
         <div class="fi"><span class="fm src">근거</span><span class="fd">예결위 정책자료 게시판 실물 — 심사순서 일일 갱신 · 부처 협조사항 · 공통요구자료 요구 · 서면질의 양식 등록 이력</span></div>
       </div>
       <aside class="notes">2교시에서 각자 만들 것도 이 목록에 한 줄 더하는 일이라고 여기서 말로 짚는다.</aside>
-    </section>>>
+    </section>
 
     <section class="slide" data-sid="s46b">
       <div class="eyebrow">3절 · 내 업무 — 실물</div>
@@ -1439,7 +1453,7 @@ ul.bullets li .note{margin-top:4px}
       <aside class="notes">이 덱에서 가장 중요한 도식. "결재선을 파이프라인에 박았다"는 번역이 이 방의 언어다. 4절 간지 바로 뒤라 "지금부터 뜯어볼 물건이 이것"으로 열고, 관문 두 개를 손으로 짚는다. 2교시에 각자 설치할 저장소라는 점을 마지막에 말한다.</aside>
     </section>
 
->
+
 
     <section class="slide" data-sid="s40">
       <div class="eyebrow">4절 · 부품 뜯어보기 — 팀 구성</div>
@@ -1766,7 +1780,7 @@ ul.bullets li .note{margin-top:4px}
       <aside class="notes">약어 공포를 먼저 없애는 장. "창구(API) / 플러그(MCP)" 두 단어만 남기면 된다. 다음 두 장이 각각 그 창구 목록과 플러그 실물.</aside>
     </section>
 
->
+
 
     <section class="slide" data-sid="s23">
       <div class="eyebrow">4절 · 부품 뜯어보기 — API ①</div>
@@ -1803,7 +1817,7 @@ ul.bullets li .note{margin-top:4px}
         <div class="fi"><span class="fm src">비고</span><span class="fd">배포 자료의 도구 카탈로그에 각 창구의 주소·인증 방식·확인된 서비스명을 정리해 두었다 — 열린국회정보·법령 API는 실제 호출로 응답을 확인한 것이다</span></div>
       </div>
       <aside class="notes">다음 장의 실제 화면 캡처로 바로 이어진다.</aside>
-    </section>>>
+    </section>
 
     <section class="slide" data-sid="s23c">
       <div class="eyebrow">4절 · 부품 뜯어보기 — 실물</div>
@@ -2219,7 +2233,7 @@ ul.bullets li .note{margin-top:4px}
       <div class="callout">규칙을 지키게 만드는 힘은 문장의 강도에서 나오지 않는다 — <b>그 규칙이 어디에 적혀 있는가</b>에서 나온다</div>
       <aside class="notes">계단 그림으로 설명. 아래 칸에서 위 칸으로 올라갈수록 "잊음"과 "어김"이 차례로 제거된다는 점을 손으로 짚으며 말하면 좋다. 다음 두 장이 가운데 칸과 위 칸의 실물이다.</aside>
     </section>
->
+
 
     <section class="slide" data-sid="s76-2">
       <div class="eyebrow">5절 · 실물 — 파일에 적는다</div>
@@ -2238,7 +2252,7 @@ ul.bullets li .note{margin-top:4px}
 <b>8. 보안</b>  미공개 부처 제출자료·심사 전 내부자료는 입력하지 않는다.</div>
       <div class="callout">오늘 아무것도 안 해도 <b>이 블록 하나는 복사해 갈 것</b> — 이것만으로 절반은 된다</div>
       <aside class="notes">배포 파일(templates/CLAUDE.fiscal.md)에 같은 내용이 들어 있다고 안내한다. 화면을 띄워 둔 채로 받아적게 하지 말고 파일로 가져가라고 말할 것.</aside>
-    </section>>
+    </section>
 
     <section class="slide" data-sid="s77">
       <div class="eyebrow">5절 · 실물 — 기계가 검산한다</div>
